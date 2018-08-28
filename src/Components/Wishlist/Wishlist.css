@@ -1,0 +1,42 @@
+.Container {
+  display: grid;
+  grid-template-rows: 100px auto 50px;
+}
+
+.Header {
+
+}
+
+.List {
+  display: flex;
+  grid-row: 2;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Footer {
+  
+}
+
+.Card {
+  background-color: white;
+  margin: 10px;
+  border-radius: 15px;
+  height: 40px;
+  width: auto;
+  border-width: 2px solid black;
+  font-size: 12px;
+
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+}
+
+.CardItem {
+  grid-column: 1;
+}
+
+.CardQuantity {
+  grid-column: 2;
+}
+
+.
