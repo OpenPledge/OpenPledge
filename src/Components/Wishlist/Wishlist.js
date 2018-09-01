@@ -31,11 +31,13 @@ class Wishlist extends Component {
       <div className="Container">
         <div className="Header">
           <h1>Donation Drives Running Now</h1>
-            {this.state.wishLists.map(function(wishList, index){
+        </div>
+          <div className="Wishlist-all">
+            {this.state.wishLists.map((wishList, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className="Wishlist-list">
                       <h2>{wishList.title}</h2>
-                      <div id={wishList.id}>
+                      <div key={wishList.id} className="Wishlist-item">
                           {wishList.items.map(item =>
                             <p>{item.name} ({item.unit}) Needed: {item.needed} Pledged: {item.pledged}</p>)}
 

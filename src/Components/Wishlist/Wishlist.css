@@ -3,9 +3,23 @@
   grid-template-rows: 100px auto 50px;
 }
 
+
 .Header {
 
 }
+
+.Wishlist-all {
+
+}
+
+.Wishlist-list {
+
+}
+
+.Wishlist-item {
+
+}
+
 
 .List {
   display: block;
