@@ -12,7 +12,9 @@ class Wishlist extends Component {
     componentDidMount() {
         this.render();
     }
+
     componentWillMount() {
+        // All WishLists including their items
         fetch('http://localhost:8000/api/wishlist/get_all')
           .then(data => data.json())
           .then(result => {

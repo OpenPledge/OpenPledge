@@ -3,6 +3,7 @@ import logo from '../../logo.svg';
 import './Dashboard.css';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
+
 class Dashboard extends Component {
     state = {
         data: [
