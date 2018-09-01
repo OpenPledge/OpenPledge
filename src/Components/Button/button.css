@@ -1,0 +1,19 @@
+.Button{
+  background: #eb94d0;
+  background-image: linear-gradient(to bottom, #246A73, #DEF2C8);
+  border-radius: 20px;
+  text-shadow: 3px 2px 1px #9daef5;
+  box-shadow: 6px 5px 24px #666666;
+  font-family: 'Lobster', cursive;
+  color: #007755;
+  font-size: 20px;
+  padding: 15px;
+  width: 150px;
+  margin: 10px;
+  text-decoration: none;
+}
+.Button:hover {
+  background: #2079b0;
+  background-image: linear-gradient(to bottom, #DEF2C8, #246A73);
+  text-decoration: none;
+}
