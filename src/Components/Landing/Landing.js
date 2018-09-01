@@ -8,7 +8,7 @@ class Landing extends Component {
     return (
       <div className="Landing">
 
-        <h1 className="Landing--title">St. Anthony's</h1>
+        <h1 className="Landing--title">St. Anthony\'s</h1>
         <p className="Landing--slogan">Volunteer or Donate your Time!</p>
         <div>
           <Link to="/sign-up/">
