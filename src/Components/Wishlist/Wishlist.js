@@ -13,6 +13,11 @@ class Wishlist extends Component {
         this.render();
     }
 
+    pledge(wishList, item){
+        console.log('Pledge clicked for Wish List: ' + wishList + ' Item: ' + item);
+    }
+
+
     componentWillMount() {
         // All WishLists including their items
         fetch('http://localhost:8000/api/wishlist/get_all')
@@ -31,16 +36,23 @@ class Wishlist extends Component {
       <div className="Container">
         <div className="Header">
           <h1>Donation Drives Running Now</h1>
-            {this.state.wishLists.map(function(wishList, index){
+        </div>
+          <div className="Wishlist-all">
+            {this.state.wishLists.map((wishList, index) => {
                 return (
-                  <div key={index}>
-                      <h2>{wishList.title}</h2>
-                      <div id={wishList.id}>
+                  <div key={index} className="Wishlist-list">
+                      <div className="Wishlist-title"><h2>{wishList.title}</h2></div>
+
                           {wishList.items.map(item =>
-                            <p>{item.name} ({item.unit}) Needed: {item.needed} Pledged: {item.pledged}</p>)}
+                            <div key={item.name} className="Wishlist-item">
+                                <div className="Wishlist-item-name">{item.name}</div>
+                                <div className="Wishlist-item-unit">({item.unit})</div>
+                                <div className="Wishlist-item-needed">Needed: {item.needed}</div>
+                                <div className="Wishlist-item-pledged">Pledged: {item.pledged}</div>
+                                <div className="Wishlist-item-button"><button onClick={() => this.pledge(wishList.id, item.id)}>Pledge</button></div>
+                            </div>)}
 
                       </div>
-            </div>
 
                 )
             })}
