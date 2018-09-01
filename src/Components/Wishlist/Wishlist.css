@@ -1,23 +1,65 @@
+
 .Container {
   display: grid;
-  grid-template-rows: 100px auto 50px;
+     grid-template-rows: auto;
+    grid-template-columns: 100%;
+    align-content: center;
+    margin: auto;
+    width: 60%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+
 }
 
 
 .Header {
+    text-align: center;
+}
+.Wishlist-title {
+    background-image: linear-gradient(white, #F1F1F1);
 
 }
 
 .Wishlist-all {
-
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    align-content: center;
+    background-color:
 }
 
 .Wishlist-list {
-
 }
 
 .Wishlist-item {
-
+    font-size: 1.5rem;
+    display: flex;
+    flex-basis: auto;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+.Wishlist-item:hover {
+    background-image: linear-gradient(white, lightblue);
+}
+.Wishlist-item-name {
+    font-weight: bolder;
+    width: 120px;
+}
+.Wishlist-item-unit {
+    width: 60px;
+    margin-left: 20px;
+}
+.Wishlist-item-needed {
+    width: 175px;
+    margin-left: 15vw;
+    margin-right: 50px;
+}
+.Wishlist-item-pledged {
+    width: auto;
+    margin-right: auto;
+}
+.Wishlist-item-button {
+    align-content: flex-end;
 }
 
 

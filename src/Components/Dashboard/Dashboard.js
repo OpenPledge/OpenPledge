@@ -20,6 +20,8 @@ class Dashboard extends Component {
             },
         ]
     };
+
+
   render() {
       const cardStyle = {width:"23vw", height:"23vh"};
       return (

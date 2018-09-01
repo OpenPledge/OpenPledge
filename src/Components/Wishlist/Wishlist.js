@@ -13,6 +13,11 @@ class Wishlist extends Component {
         this.render();
     }
 
+    pledge(wishList, item){
+        console.log('Pledge clicked for Wish List: ' + wishList + ' Item: ' + item);
+    }
+
+
     componentWillMount() {
         // All WishLists including their items
         fetch('http://localhost:8000/api/wishlist/get_all')
@@ -36,13 +41,18 @@ class Wishlist extends Component {
             {this.state.wishLists.map((wishList, index) => {
                 return (
                   <div key={index} className="Wishlist-list">
-                      <h2>{wishList.title}</h2>
-                      <div key={wishList.id} className="Wishlist-item">
+                      <div className="Wishlist-title"><h2>{wishList.title}</h2></div>
+
                           {wishList.items.map(item =>
-                            <p>{item.name} ({item.unit}) Needed: {item.needed} Pledged: {item.pledged}</p>)}
+                            <div key={item.name} className="Wishlist-item">
+                                <div className="Wishlist-item-name">{item.name}</div>
+                                <div className="Wishlist-item-unit">({item.unit})</div>
+                                <div className="Wishlist-item-needed">Needed: {item.needed}</div>
+                                <div className="Wishlist-item-pledged">Pledged: {item.pledged}</div>
+                                <div className="Wishlist-item-button"><button onClick={() => this.pledge(wishList.id, item.id)}>Pledge</button></div>
+                            </div>)}
 
                       </div>
-            </div>
 
                 )
             })}
