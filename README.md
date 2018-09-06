@@ -1,5 +1,5 @@
 # Open Pledge
-Welcome! This project is still in very early alpha stages, feel free to contact us if you are interested in using it for your non-profit. 
+Welcome! This project is still in very early alpha stages, but feel free to contact us if you are interested in using it for your non-profit!
 
 ### Front-end
 - React.js, JSX, CSS 
