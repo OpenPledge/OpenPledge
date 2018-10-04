@@ -6,5 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Wishlist from './Components/Wishlist/Wishlist.js';
 import Dashboard from './Components/Dashboard/Dashboard.js';
 
-ReactDOM.render(<Wishlist />, document.getElementById('root'));
+import SignIn from './Components/SignIn/SignIn.js';
+import SignUp from './Components/SignUp/SignUp.js';
+import Commitment from './Components/Commitment/Commitment.js';
+
+ReactDOM.render(<SignIn />, document.getElementById('root'));
 registerServiceWorker();
