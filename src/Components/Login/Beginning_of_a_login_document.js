@@ -9,7 +9,8 @@ class Log_In extends Component {
     redirectTo: null
   }
 
-  Log_In = () => {
+  onLog In = () => {
+    const url = '/login';
     const data = {
       username: this.state.username,
       password: this.state.password,
@@ -17,7 +18,7 @@ class Log_In extends Component {
     fetch(url, {
       method: "POST",
       headers: {
-        '': ''
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
@@ -28,6 +29,17 @@ class Log_In extends Component {
           this.props.onSuccessfulLogIn({
             isLoggedIn: true,
             data: data,
-          })  
+          })
+          this.setState({
+            redirectTo: '/browse/'
+          })
+        }
+        else {
+          alert("Failed login attempt.")
+        }
+        console.log("directing to", this.state.redirectTo);
+      }
+    );
+  }
 
 export default Log_In;
