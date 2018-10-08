@@ -1,0 +1,142 @@
+/*
+Challenge 1
+Make it so that the AnimalPen takes 3 seconds to transitions to the "brown"
+background, instead of instantly switching.
+*/
+
+.AnimalPen {
+    background: transparent;
+    transition: background 3s;
+}
+
+.AnimalPen:hover {
+    background: brown;
+}
+
+
+
+
+/*
+Challenge 2
+Make each part of the river grow in size (taking 2 seconds) when you move the
+mouse over it.
+
+HINT: Think about adjusting the height and width or padding on hover. Selectors
+are written for you below.
+*/
+
+.River {
+    padding: 0px;
+    transition: padding 2s;
+}
+
+.River--part1:hover {
+    padding: 10px;
+}
+
+.River--part2:hover {
+    padding: 20px;
+}
+
+.River--part3:hover {
+    padding: 30px;
+}
+
+
+
+
+/*
+Challenge 3
+Make it so that the Rabbit repeatedly "hops" when you hover your cursor over
+it. It should take 0.2s to Hop.
+
+HINT: The "Hop" animation is already written for you. Make sure you set
+"animation-direction: alternate;" to make sure it bounces "back and forth" as
+opposed to just leaping then "teleporting" back down, and also make sure you
+make "animation-iteration-count: infinite" to make the bunny continually jump
+for joy. Code below:
+*/
+
+.Rabbit:hover {
+    transform: translate3d(0, 0, 0);
+    animation: Hop 0.2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Hop {
+  from { transform: translate3d(0, 0, 0);    }
+  to   { transform: translate3d(0, 50px, 0); }
+}
+
+
+/*
+Challenge 4
+The "rhythm" or timing of the motion of the hop isn't so great, is it? It
+doesn't look very much like a hop. This is where a "timing function" comes into
+play, also known in animation as "tweening" (since it refers to the
+"in-between" states in an animation). We need to use a
+
+HINT: Getting a good timing function can be difficult
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1,0.5);
+*/
+
+.Rabbit:hover {
+    animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+}
+
+/*
+Challenge 5
+Make the bear slide around the screen continually.
+*/
+
+
+.Bear {
+  animation: BearMoving 3.0s 0s infinite alternate;
+}
+
+@keyframes BearMoving {
+  from {
+    right: 10vw;
+    top: 10vh;
+  }
+  to {
+    right: 90vw;
+    top: 40vh;
+  }
+}
+
+/*
+Bonus Challenge:
+Make it so that when you hover over the animals in the pen, they hop up and
+spin around once.
+*/
+
+.Pig:hover,
+.Horse:hover,
+.Goat:hover {
+    animation: HopSpin 0.8s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes HopSpin {
+    from {
+        transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
+    50% {
+        transform: translate3d(10px, -40px, 0) rotateY(180deg);
+    }
+    70% {
+        transform: translate3d(10px, -40px, 0) rotateY(0deg);
+    }
+    90% {
+        transform: translate3d(10px, -40px, 0) rotateY(180deg);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
+}
+

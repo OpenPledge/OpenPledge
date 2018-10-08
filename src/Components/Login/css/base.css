@@ -1,0 +1,150 @@
+/* Don't edit this file. Instead look at site.css! */
+
+body {
+    background: url('../img/grass_top.png');
+}
+
+
+.River {
+    background: url('../img/water.png');
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.AnimalPen {
+    border: 3px solid brown;
+    z-index: -10;
+}
+
+.Wheat {
+    display: block;
+    position: absolute;
+}
+
+/* ********************************** */
+
+.AnimalPen {
+    position: fixed;
+    bottom: 20px;
+    padding: 30px;
+    left: 20px;
+    width: 500px;
+}
+
+.Goat {
+    position: fixed;
+    left: 392px;
+    bottom: 100px;
+    z-index: -10;
+}
+
+.River--part1 {
+    right: 73px;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 187px;
+}
+
+.River--part2 {
+    position: absolute;
+    right: 60px;
+    top: 351px;
+    height: 50px;
+    width: 50px;
+}
+
+.River--part3 {
+    position: absolute;
+    right: 116px;
+    height: 150px;
+    width: 150px;
+    top: 451px;
+}
+
+.Stone1 {
+    background: gray;
+    border: 5px darkgray solid;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    right: 129px;
+    top: 500px;
+}
+
+.Stone3 {
+    background: gray;
+    border: 5px darkgray solid;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    right: 204px;
+    top: 276px;
+}
+
+.Stone2 {
+    background: gray;
+    border: 5px darkgray solid;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    right: 160px;
+    top: 373px;
+}
+
+.Bear {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    z-index: 10;
+}
+
+.Wheat:nth-child(1) {
+    left: 80px;
+    top: 50px;
+}
+
+.Wheat:nth-child(2) {
+    left: 190px;
+    top: 30px;
+}
+
+.Wheat:nth-child(3) {
+    left: 290px;
+    top: 76px;
+}
+
+.Rabbit {
+    position: absolute;
+    top: -30px;
+    left: 280px;
+    z-index: 12;
+}
+
+
+/* Bonus challenge */
+
+.AnimalPen:before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -10px;
+    width: 650px;
+    height: 150px;
+    display: block;
+    z-index: 10;
+    background: url('../img/fence_wood.png');
+}
+
+
+.AnimalPen:after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -10px;
+    width: 650px;
+    height: 150px;
+    display: block;
+    z-index: 50;
+    background: url('../img/fence_wood.png');
+}
