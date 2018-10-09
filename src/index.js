@@ -5,6 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Wishlist from './Components/Wishlist/Wishlist.js';
 import Dashboard from './Components/Dashboard/Dashboard.js';
+import App from './App.js';
 
-ReactDOM.render(<Wishlist />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
