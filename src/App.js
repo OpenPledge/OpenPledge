@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Components/Nav/Nav';
-import LoginForm from './Components/LoginForm';
-import SignupForm from './Components/SignupForm';
+import LoginForm from './Components/Nav/LoginForm';
+import SignupForm from './Components/Nav/SignupForm';
 import './App.css';
 import Wishlist from "./Components/Wishlist/Wishlist";
 
