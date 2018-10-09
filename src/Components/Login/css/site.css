@@ -1,3 +1,47 @@
+.Dashboard {
+  text-align: center;
+}
+
+.Dashboard-logo {
+  animation: Dashboard-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.Dashboard-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.Dashboard-title {
+  font-size: 1.5em;
+}
+
+.Dashboard-intro {
+  font-size: large;
+}
+.Dashboard-Cards {
+  display: flex;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: auto;
+padding: 10px;
+  flex-wrap: wrap;
+}
+.Dashboard-Card {
+
+  display: block;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+@keyframes Dashboard-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
 /*
 Challenge 1
 Make it so that the AnimalPen takes 3 seconds to transitions to the "brown"
